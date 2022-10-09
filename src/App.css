@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+/* define variables for colors */
+:root {
+--primary: rgb(225, 20, 109);
+--secundary: #F58EBB;
+--third: #FDECF4;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background-color: var(--primary);
+  color: whitesmoke;
+  padding: 20px;
+}
+.header--image {
+  height: 100%;
+  margin-right: 6px;
+  }
+
+.header--title {
+  font-size: 20px;
+  margin-right: auto;  
+}
+
+.header-project {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.container {
+  padding: 30px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+  width: 800px
+  
+  
+}
+
+.form--input {
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background-color: var(--third);
+  border: none;
+  }
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--primary:);
+}
+
+.download--button {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background-color: var(--secundary);
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  height: 10%;
+  padding: 4px;
+  margin: 8px;
+}
+
+.meme {
+    position:relative;    
+}
+
+.meme--image {
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.meme--text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 0;
+}
+
+/* responsive form */
+
+
+@media only screen and (max-width: 600px) {
+  .container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;       
+    }
+  
+  .form  {
+    position:relative; 
+    width: auto;
+    margin: 2px;
+}
+}
+
